@@ -1,3 +1,6 @@
+<?php
+        include("../includes/header.php");
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,14 +10,12 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <?php
-        include("../includes/header.php");
-    ?>
+    
 
 
 <div class="container">
   <div class="row">
-    <div class="wrap-login col-md-5 col-md-offset-3">
+    <div class="wrap-register col-md-6 col-md-offset-3">
       <h2 class="text-center" style="margin-bottom: 30px;">Create Account</h2>
     <form action="/action_page.php">
   <div class="form-group">
@@ -45,7 +46,7 @@
   </div>
   <div class="form-group">
     <label>Phone Number</label>
-    <input type="text" name="pnumber" class="form-control" autocomplete="off">
+    <input type="text" name="phone" class="form-control" autocomplete="off">
   </div>
 
   <div class="form-group" style="margin-top: 15px;margin-bottom: 15px;">
@@ -78,19 +79,17 @@
     <label >Password:</label>
     <input type="password" name="pass" class="form-control" autocomplete="off">
   </div>
-    <input style="margin-top: 15px;" type="submit" class="button-18" value=" Login ">
-    <p style="margin-top: 12px;">I don't have account <a href="account.php">Register here</a></p>
+
+  <div class="form-group">
+    <label >Confirm Password:</label>
+    <input type="password" name="con_pass" class="form-control" autocomplete="off">
+  </div>
+    <input style="margin-top: 15px;" type="submit" class="button-18" value="Create Account">
+    <p style="margin-top: 12px;">I already have an account <a href="index.php">Click here</a></p>
 </form>
 
     </div>
   </div>
-      <div class="row">
-        <div class="col-md-4 col-md-offset-3">
-          <p class="text-center " style="margin-top: 30px;">
-              <a href="">Forgot password click here</a>
-        </p>
-        </div>
-      </div>
 </div>
     
 </body>

@@ -3,7 +3,18 @@
 
 
 body{
-    background-color: f8f8f8;
+    background-color: #f8f8f8;
+}
+.wrap-register{
+    padding: 20px;
+    margin-top: 20px;
+    padding-bottom: 50px;
+    background-color: #fff;
+    border: solid 1px #d0d0d0;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.42);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.42);
+box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.42);
+
 }
 
 .wrap-login{
