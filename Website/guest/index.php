@@ -18,19 +18,26 @@
       <h2 style="margin-bottom: 30px;">Member Login</h2>
     <form action="/action_page.php">
   <div class="form-group">
-    <label for="email">Email address:</label>
-    <input type="email" class="form-control" id="email">
+    <label>Enter Username:</label>
+    <input type="text" name="uname" class="form-control" autocomplete="off">
   </div>
   <div class="form-group">
-    <label for="pwd">Password:</label>
-    <input type="password" class="form-control" id="pwd">
+    <label >Password:</label>
+    <input type="password" name="pass" class="form-control" autocomplete="off">
   </div>
-    <input style="margin-top: 15px;" type="submit" class="btn btn-success" value=" Login ">
-    <p style="margin-top: 12px;">I don't have account <a href="">Register here</a></p>
+    <input style="margin-top: 15px;" type="submit" class="button-18" value=" Login ">
+    <p style="margin-top: 12px;">I don't have account <a href="account.php">Register here</a></p>
 </form>
 
     </div>
   </div>
+      <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+          <p class="text-center" style="margin-top: 30px;">
+              <a href="">Forgot password click here</a>
+        </p>
+        </div>
+      </div>
 </div>
   
 </body>
