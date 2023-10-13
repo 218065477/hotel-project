@@ -40,7 +40,7 @@
                 $error['ac'] = "Password do not Match";
             }
 
-
+                if(count($error))
 
 
         }
