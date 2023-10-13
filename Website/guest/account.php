@@ -1,6 +1,51 @@
 <?php
         include("../includes/header.php");
-    ?>
+        include("../db.php");
+
+        if(isset($_POST['create'])){
+            
+            $title = $_POST['title'];
+            $fname = $_POST['fname'];
+            $lname = $_POST['lname'];
+            $uname = $_POST['uname'];
+            $email = $_POST['email'];
+            $phone = $_POST['phone'];
+            $nation = $_POST['nation'];
+            $country = $_POST['country'];
+            $pass = $_POST['pass'];
+            $con_pass = $_POST['con_pass'];
+
+
+            $error = $array();
+
+            if(empty('title')){
+                $error['ac'] = "Select Your title";
+            }else if(empty('fname')){
+                $error['ac'] = "Enter Firstname";
+            }else if(empty('lname')){
+                $error['ac'] = "Enter Lastname";
+            }else if(empty('uname')){
+                $error['ac'] = "Enter Username";
+            }else if(empty('email')){
+                $error['ac'] = "Enter Email";
+            }else if(empty('phone')){
+                $error['ac'] = "Enter Phone Number";
+            }else if(empty('fname')){
+                $error['ac'] = "Choose wheather you are South African or Non South African";
+            }else if(empty('country')){
+                $error['ac'] = "Select Your Country of Origin";
+            }else if(empty('pass')){
+                $error['ac'] = "Enter Password";
+            }else if(empty('con_pass')){
+                $error['ac'] = "Password do not Match";
+            }
+
+
+
+
+        }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,12 +78,18 @@
   </div>
   <div class="form-group">
     <label>First Name</label>
-    <input type="text" name="fname" class="form-control" autocomplete="off">
+    <input type="text" name="fname" class="form-control" autocomplete="off" required>
   </div>
   <div class="form-group">
     <label>Last Name:</label>
     <input type="text" name="lname" class="form-control" autocomplete="off">
   </div>
+
+  <div class="form-group">
+    <label>Username Name:</label>
+    <input type="text" name="uname" class="form-control" autocomplete="off">
+  </div>
+
   <div class="form-group">
     <label>Email</label>
     <input type="text" name="email" class="form-control" autocomplete="off">
@@ -52,10 +103,10 @@
   <div class="form-group" style="margin-top: 15px;margin-bottom: 15px;">
     <label>Nationality*</label>
     <label class="radio-inline">
-    <input type="radio" name="nation"  value="Sri Lankan" checked="">South African
+    <input type="radio" name="nation"  value="South African" checked="">South African
      </label>
     <label class="radio-inline">
-        <input type="radio" name="nation"  value="Non Sri Lankan ">Non South African 
+        <input type="radio" name="nation"  value="Non South African">Non South African 
     </label>
   </div>
 
@@ -84,7 +135,7 @@
     <label >Confirm Password:</label>
     <input type="password" name="con_pass" class="form-control" autocomplete="off">
   </div>
-    <input style="margin-top: 15px;" type="submit" class="button-18" value="Create Account">
+    <input style="margin-top: 15px;" name="create" type="submit" class="button-18" value="Create Account">
     <p style="margin-top: 12px;">I already have an account <a href="index.php">Click here</a></p>
 </form>
 

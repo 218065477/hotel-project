@@ -62,7 +62,7 @@ if(!isset($_SESSION["user"]))
                 <ul class="nav" id="main-menu">
 
                     <li>
-                        <a class="active-menu" href="home.php"><i class="fa fa-dashboard"></i> Status</a>
+                        <a class="active-menu" href="room.php"><i class="fa fa-dashboard"></i> Status</a>
                     </li>
                     <li>
                         <a href="messages.php"><i class="fa fa-desktop"></i> News Letters</a>

@@ -21,10 +21,9 @@
 </head>
 
 <body>
-
  <div class="container">
-      <div>
-        <h5>Admin Login</h5>
+      <div style="margin-bottom: 20px;">
+      <h2 class="text-center" style="font-size: 20px;" >Admin Login</h2>
       </div>
       <div id="login">
 

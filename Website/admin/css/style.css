@@ -21,6 +21,10 @@
        box-sizing: border-box;
 }
 
+.text-center {
+	text-align: center;
+  }
+
 body {
   background: #2c3338;
   color: #606468;
