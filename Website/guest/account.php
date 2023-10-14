@@ -1,52 +1,83 @@
 <?php
-        include("../includes/header.php");
-        include("../db.php");
+  require 'connection.php';
+  include("../includes/header.php");
 
-        if(isset($_POST['create'])){
+
+        if(isset($_POST["submit"])){
+          $title = $_POST["title"];
+          $fname = $_POST["fname"];
+          $lname = $_POST["lname"];
+          $uname = $_POST["uname"];
+          $email = $_POST["email"];
+          $phone = $_POST["phone"];
+          $nation = $_POST["nation"];
+          $country = $_POST["country"];
+          $pass = $_POST["pass"];
+
+      
+          $query = "INSERT INTO user_data() VALUES('','$title','$fname','$lname','$uname,'$email','$phone','$nation','$country', '$pass')";
+          mysqli_query($conn, $query);
+          echo
+          "
+              <script>alert('Data inserted successfully');</script>
+          ";
+      
+      
+      }
+    
+      
+
             
-            $title = $_POST['title'];
-            $fname = $_POST['fname'];
-            $lname = $_POST['lname'];
-            $uname = $_POST['uname'];
-            $email = $_POST['email'];
-            $phone = $_POST['phone'];
-            $nation = $_POST['nation'];
-            $country = $_POST['country'];
-            $pass = $_POST['pass'];
-            $con_pass = $_POST['con_pass'];
+          // $title = $_POST['title'];
+          // $fname = $_POST['fname'];
+          // $lname = $_POST['lname'];
+          // $uname = $_POST['uname'];
+          // $email = $_POST['email'];
+          // $phone = $_POST['phone'];
+          // $nation = $_POST['nation'];
+          // $country = $_POST['country'];
+          // $pass = $_POST['pass'];
+          // $con_pass = $_POST['con_pass'];
 
 
-            $error = $array();
+          // $error = $array();
 
-            if(empty('title')){
-                $error['ac'] = "Select Your title";
-            }else if(empty('fname')){
-                $error['ac'] = "Enter Firstname";
-            }else if(empty('lname')){
-                $error['ac'] = "Enter Lastname";
-            }else if(empty('uname')){
-                $error['ac'] = "Enter Username";
-            }else if(empty('email')){
-                $error['ac'] = "Enter Email";
-            }else if(empty('phone')){
-                $error['ac'] = "Enter Phone Number";
-            }else if(empty('fname')){
-                $error['ac'] = "Choose wheather you are South African or Non South African";
-            }else if(empty('country')){
-                $error['ac'] = "Select Your Country of Origin";
-            }else if(empty('pass')){
-                $error['ac'] = "Enter Password";
-            }else if(empty('con_pass')){
-                $error['ac'] = "Password do not Match";
-            }
+          // if(empty('title')){
+          //     $error['ac'] = "Select Your title";
+          // }else if(empty('fname')){
+          //     $error['ac'] = "Enter Firstname";
+          // }else if(empty('lname')){
+          //     $error['ac'] = "Enter Lastname";
+          // }else if(empty('uname')){
+          //     $error['ac'] = "Enter Username";
+          // }else if(empty('email')){
+          //     $error['ac'] = "Enter Email";
+          // }else if(empty('phone')){
+          //     $error['ac'] = "Enter Phone Number";
+          // }else if(empty('fname')){
+          //     $error['ac'] = "Choose wheather you are South African or Non South African";
+          // }else if(empty('country')){
+          //     $error['ac'] = "Select Your Country of Origin";
+          // }else if(empty('pass')){
+          //     $error['ac'] = "Enter Password";
+          // }else if(empty('con_pass')){
+          //     $error['ac'] = "Password do not Match";
+          // }
 
-                if(count($error))
-                {
-                  
-                }
+          //     if(count($error))
+          //     {
+          //       $query = "Insert into guest (id,title,firstname,lastname,username,email,phone,nation,country,password,date_reg,profile) 
+          //       values('$title','$fname','$lname','$uname,'$email','$phone','$nation','$country', '$pass',NOW(),'guest.jpg')";
+                
+          //       $res = mysqli_query($con,$query);
 
-
-        }
+          //       if($res){
+          //         header("location: index.php");
+          //       }else{
+          //         echo "<script>alert('Failed')</script>";
+          //       }
+          //     }
+       
 ?>
 
 <!DOCTYPE html>
@@ -56,6 +87,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create account</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 <body>
     
@@ -65,11 +97,14 @@
   <div class="row">
     <div class="wrap-register col-md-6 col-md-offset-3">
       <h2 class="text-center" style="margin-bottom: 30px;">Create Account</h2>
-    <form action="/action_page.php">
+    
+    <!-- Form to create account -->
+ <form class="" action=""  method="post" autocomplete="off">
+
   <div class="form-group">
     <label>Title*</label>
     <select name="title" class="form-control" required >
-		<option value selected ></option>
+		    <option value="" selected hidden>Select Title</option>
         <option value="Dr.">Dr.</option>
         <option value="Miss.">Miss.</option>
         <option value="Mr.">Mr.</option>
@@ -81,35 +116,36 @@
   </div>
   <div class="form-group">
     <label>First Name</label>
-    <input type="text" name="fname" class="form-control" autocomplete="off" required>
+    <input type="text" name="fname" class="form-control" required>
   </div>
   <div class="form-group">
     <label>Last Name:</label>
-    <input type="text" name="lname" class="form-control" autocomplete="off">
+    <input type="text" name="lname" class="form-control" required>
   </div>
 
   <div class="form-group">
-    <label>Username Name:</label>
-    <input type="text" name="uname" class="form-control" autocomplete="off">
+    <label>Username:</label>
+    <input type="text" name="uname" class="form-control" required>
   </div>
 
   <div class="form-group">
     <label>Email</label>
-    <input type="text" name="email" class="form-control" autocomplete="off">
+    <input type="text" name="email" class="form-control" required>
 
   </div>
   <div class="form-group">
     <label>Phone Number</label>
-    <input type="text" name="phone" class="form-control" autocomplete="off">
+    <input type="text" name="phone" class="form-control" required>
   </div>
 
   <div class="form-group" style="margin-top: 15px;margin-bottom: 15px;">
-    <label>Nationality*</label>
+
+    <label for="">Nationality*</label>
     <label class="radio-inline">
-    <input type="radio" name="nation"  value="South African" checked="">South African
-     </label>
+    <input type="radio" name="nation" value="South African" required>South African
+    </label>
     <label class="radio-inline">
-        <input type="radio" name="nation"  value="Non South African">Non South African 
+    <input type="radio" name="nation" value="Non South African" required>Non South African
     </label>
   </div>
 
@@ -121,7 +157,7 @@
     <div class="form-group">
         <label>Passport Country*</label>
         <select name="country" class="form-control" required>
-		<option value selected ></option>
+		<option value selected hidden >Select Country</option>
         <?php
 		foreach($countries as $key => $value):
 		echo '<option value="'.$value.'">'.$value.'</option>'; //close your tags!!
@@ -131,20 +167,39 @@
 		</div>
   <div class="form-group">
     <label >Password:</label>
-    <input type="password" name="pass" class="form-control" autocomplete="off">
+    <input type="password" name="pass" class="form-control" id="myInput" required>
+    <input type="checkbox" onclick="myFunction()" style="margin-top: 15px;"> Show Password
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myInput");
+  if (x.type === "password") { 
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
   </div>
 
-  <div class="form-group">
+  <script>
+    pass.setAttribute('type', type);
+    // toggle the eye slash icon
+    this.classList.toggle('fa-eye-slash');
+</script>
+
+  <!-- <div class="form-group">
     <label >Confirm Password:</label>
-    <input type="password" name="con_pass" class="form-control" autocomplete="off">
-  </div>
-    <input style="margin-top: 15px;" name="create" type="submit" class="button-18" value="Create Account">
+    <input type="password" name="con_pass" class="form-control" required>
+  </div> -->
+    <input type="submit" class="button-18" value="Create Account" style="margin-top: 15px;" name="submit">
     <p style="margin-top: 12px;">I already have an account <a href="index.php">Click here</a></p>
 </form>
 
     </div>
   </div>
 </div>
-    
+
+
 </body>
 </html>

@@ -33,7 +33,7 @@ ob_start();
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="home.php">MAIN MENU </a>
+                <a class="navbar-brand" href="home.php">Main Menu</a>
             </div>
 
             <ul class="nav navbar-top-links navbar-right">
