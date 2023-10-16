@@ -23,8 +23,9 @@
      if(mysqli_num_rows($result)==1){
       
       echo "<script>alert('Its zero');</script>";
-      header("Location:home.php");
+      
       $_SESSION['user'] =  $username;
+      header("Location:home.php");
       }else{
        echo "<script>alert('Incorrect Username or Password');</script>";
       }
@@ -48,6 +49,17 @@
       <h2 style="margin-bottom: 30px;">Member Login</h2>
       <!-- Form start -->
     <form class="" action=""  method="post" autocomplete="off">
+      <div class="alert alert-danger">
+        <?php
+            if(isset($_POST['user']))
+            {
+              $show = $error(['user']);
+             
+            }else{
+              $show = "";
+            }
+        ?>
+      </div>
   <div class="form-group">
     <label>Username:</label>
     <input type="text" name="username" class="form-control" autocomplete="off" required>

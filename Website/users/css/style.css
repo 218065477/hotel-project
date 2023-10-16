@@ -3,7 +3,10 @@
 
 
 body{
+    
     background-color: #f8f8f8;
+    margin: 0px;
+    padding: 0px;
 }
 .wrap-register{
     padding: 20px;

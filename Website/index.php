@@ -1,6 +1,7 @@
 <?php
-	include("includes/header.php");
+	include 'includes/header.php';
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -211,8 +212,8 @@
 						<div class="col-md-6 team-img-w3-agile">
 						</div>
 						<div class="col-md-6 team-Info-agileits">
-							<h4>Lucas Jimenez</h4>
-							<span>Manager</span>
+							<h4>Sydney Moagi</h4>
+							<span>Developer</span>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.Lorem ipsum dolor .</p>
 						<div class="social-bnr-agileits footer-icons-agileinfo">
 							<ul class="social-icons3">
@@ -652,9 +653,9 @@
 		</div>
 		<div class="col-lg-6 col-md-6 col-sm-6 contact-w3-agile1" data-aos="flip-right">
 			<h4>Connect With Us</h4>
-			<p class="contact-agile1"><strong>Phone :</strong>+94 (65)222-44-55</p>
-			<p class="contact-agile1"><strong>Email :</strong> <a href="mailto:name@example.com">INFO@SUNRISE.COM</a></p>
-			<p class="contact-agile1"><strong>Address :</strong> New Kalmunai Road, Batticaloa, Sri Lanka</p>
+			<p class="contact-agile1"><strong>Phone :</strong>+27 78-959-1500</p>
+			<p class="contact-agile1"><strong>Email :</strong> <a href="sydney:218065477@student.uj.ac.za">INFO@DETROIT.COM</a></p>
+			<p class="contact-agile1"><strong>Address :</strong> Kingsway Road, Johannesburg</p>
 																
 			<div class="social-bnr-agileits footer-icons-agileinfo">
 				<ul class="social-icons3">
@@ -664,14 +665,14 @@
 								
 							</ul>
 			</div>
-			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3074.7905052320443!2d-77.84987248482734!3d39.586871613613056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c9f6a80ccf0661%3A0x7210426c67abc40!2sVirginia+Welcome+Center%2FSafety+Rest+Area!5e0!3m2!1sen!2sin!4v1485760915662" ></iframe>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114537.66146344098!2d27.912494853003256!3d-26.21937766460262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950b945a04b497%3A0xe5445f8720c4a3df!2sUniversity%20of%20Johannesburg!5e0!3m2!1sen!2sza!4v1697454926310!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 		</div>
 		<div class="clearfix"></div>
 	</div>
 </section>
 <!-- /contact -->
 			<div class="copy">
-		        <p>© 2017 SUNRISE . All Rights Reserved | Design by <a href="index.php">SUNRISE</a> </p>
+		        <p>© 2023 DETROIT . All Rights Reserved | Design by <a href="index.php">DETROIT</a> </p>
 		    </div>
 <!--/footer -->
 <!-- js -->
