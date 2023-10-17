@@ -1,7 +1,7 @@
 <?php  
  session_start();  
  
- if(isset($_SESSION["user"]))  
+ if(isset($_SESSION["admin"]))  
  {  
       header("location:home.php");  
  }  
@@ -70,7 +70,7 @@
 		
       if($count == 1) {
          
-         $_SESSION['user'] = $myusername;
+         $_SESSION['admin'] = $myusername;
          
          header("location: home.php");
       }else {

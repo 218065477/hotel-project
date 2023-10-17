@@ -27,7 +27,8 @@ include('db.php');
 <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
 <!--//fonts-->
 <link rel="stylesheet" href="../users/css/style2.css">
-    <link rel="stylesheet" href="../users/css/style.css">
+<link rel="stylesheet" href="../users/css/style.css">
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
 </head>
 <body>
