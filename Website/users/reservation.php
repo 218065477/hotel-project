@@ -59,7 +59,7 @@ header("location:user-log.php");
 									// 	echo "<script type='text/javascript'> alert('User Already in Booked')</script>";
 										
 									// }else{
-                                            $new ="Not Conform";
+                                            $new ="Not Confirmed";
                                             $query = "INSERT INTO roombook(`Title`, `FName`, `LName`, `Email`, `National`, `Phone`,
                                              `TRoom`, `Bed`, `NRoom`, `Meal`, `cin`, `cout`,`stat`,`nodays`,`date`) VALUES('$title','$name','$surname',
                                             '$email','$nation','$phone','$_POST[troom]','$_POST[bed]','$_POST[nroom]',

@@ -104,7 +104,7 @@ if(!isset($_SESSION["admin"]))
 												echo"<div class='col-md-3 col-sm-12 col-xs-12'>
 													<div class='panel panel-primary text-center no-boder bg-color-blue'>
 														<div class='panel-body'>
-															<i class='fa fa-users fa-5x'></i>
+															<i class='glyphicon glyphicon-home fa-5x'></i>
 															<h3>".$row['bedding']."</h3>
 														</div>
 														<div class='panel-footer back-footer-blue'>
@@ -119,7 +119,7 @@ if(!isset($_SESSION["admin"]))
 												echo"<div class='col-md-3 col-sm-12 col-xs-12'>
 													<div class='panel panel-primary text-center no-boder bg-color-green'>
 														<div class='panel-body'>
-															<i class='fa fa-users fa-5x'></i>
+															<i class='glyphicon glyphicon-home fa-5x'></i>
 															<h3>".$row['bedding']."</h3>
 														</div>
 														<div class='panel-footer back-footer-green'>
@@ -135,7 +135,7 @@ if(!isset($_SESSION["admin"]))
 												echo"<div class='col-md-3 col-sm-12 col-xs-12'>
 													<div class='panel panel-primary text-center no-boder bg-color-brown'>
 														<div class='panel-body'>
-															<i class='fa fa-users fa-5x'></i>
+															<i class='glyphicon glyphicon-home fa-5x'></i>
 															<h3>".$row['bedding']."</h3>
 														</div>
 														<div class='panel-footer back-footer-brown'>
@@ -151,7 +151,7 @@ if(!isset($_SESSION["admin"]))
 												echo"<div class='col-md-3 col-sm-12 col-xs-12'>
 													<div class='panel panel-primary text-center no-boder bg-color-red'>
 														<div class='panel-body'>
-															<i class='fa fa-users fa-5x'></i>
+															<i class='glyphicon glyphicon-home fa-5x'></i>
 															<h3>".$row['bedding']."</h3>
 														</div>
 														<div class='panel-footer back-footer-red'>
