@@ -66,7 +66,7 @@ include('db.php');
 									<li class="menu__item menu__item--current"><a href="" class="menu__link">Home</a></li>
 									<li class="menu__item"><a href="users/user-log.php" class="menu__link">Guest</a></li>
 									<li class="menu__item"><a href="admin/index.php" class="menu__link">Admin</a></li>
-									<li class="menu__item"><a href="#rooms" class="menu__link scroll">Rooms</a></li>
+									
 									<li class="menu__item"><a href="#team" class="menu__link scroll">Team</a></li>
 									<li class="menu__item"><a href="#gallery" class="menu__link scroll">Gallery</a></li>
 									

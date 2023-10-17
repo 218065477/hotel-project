@@ -98,10 +98,10 @@
                                         }else if(empty($title)){
                                             
                                         }else{
-                                            $user = $_SESSION['tb_data'];
+                                            $users = $_SESSION['user'];
                                             
                                            $query = "INSERT INTO report() 
-                                           VALUES('','$title','$message','$user',NOW())";
+                                           VALUES('','$title','$message','$users',NOW())";
                                            
                                            $result = mysqli_query($con,$query);
 
