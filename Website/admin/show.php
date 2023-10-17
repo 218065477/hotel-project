@@ -177,7 +177,7 @@ tr:hover .cut { opacity: 1; }
 		$lname = $row['LName'];
 		$email = $row['Email'];
 		$National = $row['National'];
-		$country = $row['Country'];
+		$date = $row['date'];
 		$phone = $row['Phone'];
 		$room_type = $row['TRoom'];
 		$Bed_type = $row['Bed'];
@@ -194,9 +194,9 @@ tr:hover .cut { opacity: 1; }
 		<header>
 			<h1>Information of Guest</h1>
 			<address >
-				<p>SUN RISE HOTEL,</p>
-				<p>New Kalmunani Road,<br>Battialoa,<br>Sri Lanka.</p>
-				<p>(+94) 65 222 44 55</p>
+				<p>DETROIT HOTEL,</p>
+				<p>Kingsway Road,<br>Auckland Park,<br>Johannesburg.</p>
+				<p>(+27) 78 959 1500</p>
 			</address>
 			<span><img alt="" src="assets/img/sun.png"></span>
 		</header>
@@ -229,7 +229,7 @@ tr:hover .cut { opacity: 1; }
 						<td>Customer email : -  <?php echo $email; ?> </td>
 					</tr>
 					<tr> 
-						<td>Customer Country : -  <?php echo $country; ?> </td>
+						<td>Dated Booked : -  <?php echo $date; ?> </td>
 						<td>Customer National : -  <?php echo $National; ?> </td>
 					</tr>
 				</table>
@@ -268,7 +268,7 @@ tr:hover .cut { opacity: 1; }
 		<aside>
 			<h1><span >Contact us</span></h1>
 			<div >
-				<p align="center">Email :- info@sunrise.com || Web :- www.sunrise.com || Phone :- +94 65 222 44 55 </p>
+				<p align="center">Email :- info@detroit.com || Web :- www.detroit.com || Phone :- +27 78 959 1500 </p>
 			</div>
 		</aside>
 	</body>

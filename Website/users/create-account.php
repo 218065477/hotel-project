@@ -33,7 +33,7 @@ if(isset($_POST["submit"])){
 
     if (mysqli_query($conn, $query)) {
                     //  header("location: index.php");
-                     echo "<script>window.location='index.php';</script>";
+                     echo "<script>window.location='user-log.php';</script>";
                  }else{
                     echo "Error: " . $query . "<br>" . mysqli_error($conn);
             }
@@ -173,7 +173,7 @@ function myFunction() {
    </div> -->
    <!-- Button to click when creating account -->
    <input type="submit" class="button-18" value="Create Account" style="margin-top: 15px;" name="submit">
-   <p style="margin-top: 12px;">I already have an account <a href="index.php">Click here</a></p>
+   <p style="margin-top: 12px;">I already have an account <a href="user-log.php">Click here</a></p>
 
   </form>
   <!--end Form -->

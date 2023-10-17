@@ -157,14 +157,18 @@ if(!isset($_SESSION["admin"]))
                                             <th>#</th>
                                             <th>Name</th>
                                             <th>Email</th>
-                                            <th>Country</th>
+                                           
 											<th>Room</th>
 											<th>Bedding</th>
 											<th>Meal</th>
 											<th>Check In</th>
 											<th>Check Out</th>
 											<th>Status</th>
+                                            <th>Dated booked</th>
 											<th>More</th>
+                                            
+                                            
+
 											
                                         </tr>
                                     </thead>
@@ -182,13 +186,14 @@ if(!isset($_SESSION["admin"]))
 												<th>".$trow['id']."</th>
 												<th>".$trow['FName']." ".$trow['LName']."</th>
 												<th>".$trow['Email']."</th>
-												<th>".$trow['Country']."</th>
+												
 												<th>".$trow['TRoom']."</th>
 												<th>".$trow['Bed']."</th>
 												<th>".$trow['Meal']."</th>
 												<th>".$trow['cin']."</th>
 												<th>".$trow['cout']."</th>
 												<th>".$trow['stat']."</th>
+                                                <th>".$trow['date']."</th>
 												
 												<th><a href='roombook.php?rid=".$trow['id']." ' class='btn btn-primary'>Action</a></th>
 												</tr>";

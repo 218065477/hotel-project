@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('db.php');
+require 'connection.php';
 include('../includes/header.php');
 
 if(!isset($_SESSION["user"]))
@@ -24,100 +24,70 @@ header("location:user-log.php");
 </head>
 
 <body>
-       <br>
-        <div id="page-wrapper" >
-            <div id="page-inner">
-			 <div class="row">
-                    <div class="col-md-12">
-                        <h1 class="page-header text-center">
-                            RESERVATION <small></small>
-                        </h1>
-                    </div>
-                </div> 
-                 
-                                 
-            <div class="row">
-                
-                <div class="col-md-3 col-sm-3" style="margin-left: 400px;">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            PERSONAL INFORMATION
-                        </div>
-                        <div class="panel-body">
-						<form name="form" method="post">
-                            <div class="form-group">
-                                            <label>Title*</label>
-                                            <select name="title" class="form-control" required >
-												<option value selected >'.$title.'</option>
-                                                <option value="Dr.">Dr.</option>
-                                                <option value="Miss.">Miss.</option>
-                                                <option value="Mr.">Mr.</option>
-                                                <option value="Mrs.">Mrs.</option>
-												<option value="Prof.">Prof.</option>
-												<option value="Rev .">Rev .</option>
-												<option value="Rev . Fr">Rev . Fr .</option>
-                                            </select>
-                              </div>
 
-                              <div class="form-group">
-                                            <label>Title*</label>
-                                            <select name="title" class="form-control" required >
-												<option value selected ></option>
-                                                <option value="Dr.">Dr.</option>
-                                                <option value="Miss.">Miss.</option>
-                                                <option value="Mr.">Mr.</option>
-                                                <option value="Mrs.">Mrs.</option>
-												<option value="Prof.">Prof.</option>
-												<option value="Rev .">Rev .</option>
-												<option value="Rev . Fr">Rev . Fr .</option>
-                                            </select>
-                              </div>
-							  <div class="form-group">
-                                            <label>First Name</label>
-                                            <input name="fname" class="form-control" required value="<?php echo $name; ?>">
-                                            
-                               </div>
-							   <div class="form-group">
-                                            <label>Last Name</label>
-                                            <input name="lname" class="form-control" required>
-                                            
-                               </div>
-							   <div class="form-group">
-                                            <label>Email</label>
-                                            <input name="email" type="email" class="form-control" required>
-                                            
-                               </div>
-							   <div class="form-group">
-                                            <label>Nationality*</label>
-                                            <label class="radio-inline">
-                                                <input type="radio" name="nation"  value="Sri Lankan" checked="">Sri Lankan
-                                            </label>
-                                            <label class="radio-inline">
-                                                <input type="radio" name="nation"  value="Non Sri Lankan ">Non Sri Lankan 
-                                            </label>
-                         
-                                </div>
-								
-								<div class="form-group">
-                                            <label>Phone Number</label>
-                                            <input name="phone" type ="text" class="form-control" required>
-                                            
-                               </div>
-							   
-                        </div>
-                        
+<div class="container-fluid">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-2" style="margin-left: -30px;">
+                        <?php
+                            include("sidenav.php");
+                        ?>
                     </div>
-                </div>
-                
-                  
-            <div class="row">
-                <div class="col-md-4 col-sm-6">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            RESERVATION INFORMATION
-                        </div>
-                        <div class="panel-body">
-								<div class="form-group">
+                    <div class="col-md-10">
+                        <h3 class="text-center y-2">Book Appointment</h3>
+                        <!-- Php bookings -->
+                        <?php
+                                    $users = $_SESSION['user'];
+                                    $select = mysqli_query($conn, "SELECT * FROM tb_data WHERE username='$users'");
+
+                                    $row = mysqli_fetch_array($select);
+                                    $title = $row['title'];
+                                    $name = $row['name'];
+                                    $surname = $row['surname'];
+                                    $email = $row['email'];
+                                    $phone = $row['phone'];
+                                    $nation = $row['nation'];
+
+                                    if(isset($_POST['submit']))
+                                    {
+
+                                        
+                                    //     $check="SELECT * FROM roombook WHERE email = '$email'";
+									//     $rs = mysqli_query($con,$check);
+									//     $data = mysqli_fetch_array($rs, MYSQLI_NUM);
+									//     if($data[0] > 1) {
+									// 	echo "<script type='text/javascript'> alert('User Already in Booked')</script>";
+										
+									// }else{
+                                            $new ="Not Conform";
+                                            $query = "INSERT INTO roombook(`Title`, `FName`, `LName`, `Email`, `National`, `Phone`,
+                                             `TRoom`, `Bed`, `NRoom`, `Meal`, `cin`, `cout`,`stat`,`nodays`,`date`) VALUES('$title','$name','$surname',
+                                            '$email','$nation','$phone','$_POST[troom]','$_POST[bed]','$_POST[nroom]',
+                                            '$_POST[meal]','$_POST[cin]','$_POST[cout]','$new',datediff('$_POST[cout]','$_POST[cin]'),NOW())";
+
+                                            $res = mysqli_query($conn, $query);
+
+                                        if($res){
+                                           echo "<script>alert('Booking success')</script>";
+                                        }else{
+                                            echo "Error: " . $query . "<br>" . mysqli_error($conn);
+                                        }
+
+                                    }
+
+
+                                    // End of booking
+                                    
+                                ?>
+                  <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-3"></div>
+                                    <div class="wrap-login col-md-4 col-md-offset-1">
+                                        <form action="" method="post" autocomplete="off">
+
+                                            <!-- Booking information -->
+
+                                            <div class="form-group">
                                             <label>Type Of Room *</label>
                                             <select name="troom"  class="form-control" required>
 												<option value selected ></option>
@@ -184,77 +154,23 @@ header("location:user-log.php");
                     </div>
                     
                 </div>
-				
-				
-                <div class="col-md-12 col-sm-12">
-                    <div class="well">
-                        
-						
-						<?php
-							if(isset($_POST['submit']))
-							{   
 
 
-							
-									$con=mysqli_connect("localhost","root","","hotel");
-									$check="SELECT * FROM roombook WHERE email = '$_POST[email]'";
-									$rs = mysqli_query($con,$check);
-									$data = mysqli_fetch_array($rs, MYSQLI_NUM);
-									if($data[0] > 1) {
-										echo "<script type='text/javascript'> alert('User Already in Booked')</script>";
-										
-									}
-
-									else
-									{
-
-
-										$new ="Not Conform";
-                                        $newUser = "SELECT * tb_data";
-                                        $result = mysqli_query($con,$newUser);
-                                        while($row =mysqli_fetch_array($result)){
-                                            $title = $row["title"];
-                                            $name = $row["name"];
-                                            $surname = $row["surname"];
-                                            $email = $row["email"];
-                                            $nation = $row["nation"];
-                                            $phone = $row["phone"];
-
-                                        }
-										$newUser .="INSERT INTO roombook() VALUES ('','$_POST[title]','$_POST[fname]','$_POST[lname]','$_POST[email]','$_POST[nation]',,'$_POST[phone]','$_POST[troom]','$_POST[bed]','$_POST[nroom]','$_POST[meal]','$_POST[cin]','$_POST[cout]','$new',datediff('$_POST[cout]','$_POST[cin]'))";
-										if (mysqli_query($con,$newUser))
-										{
-											echo "<script type='text/javascript'> alert('Your Booking application has been sent')</script>";
-											
-										}
-										else
-										{
-											echo "<script type='text/javascript'> alert('Error adding user in database')</script>";
-											
-										}
-									}
-
-							$msg="Your code is correct";
-							}
-							
-							?>
-						</form>
-							
+                                            <!-- End -->                                        
+                </form>
+                                    </div>
+                                </div>
+                            </div>
                     </div>
                 </div>
             </div>
-           
-                
-                </div>
-                    
-            
-				
-					</div>
-			 <!-- /. PAGE INNER  -->
-            </div>
-         <!-- /. PAGE WRAPPER  -->
-        </div>
-     <!-- /. WRAPPER  -->
+    </div>
+
+
+      
+						
+						
+						
     <!-- JS Scripts-->
     <!-- jQuery Js -->
     <script src="assets/js/jquery-1.10.2.js"></script>

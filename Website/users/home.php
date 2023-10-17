@@ -61,7 +61,7 @@
                                                     <h2 style="margin-bottom: 40px;color:white;" >My Bookings</h2>
                                                 </div>
                                                 <div class="col-md-4">
-                                                    <a href="">
+                                                    <a href="booking.php">
                                                         <i class="fa fa-user-circle fa-3x my-4";>MB</i>
                                                     </a>
                                                 </div>

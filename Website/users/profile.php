@@ -59,12 +59,12 @@
                                         <th colspan="2" class="text-center">My Details</th>
                                     </tr>
 
-                                    <!-- <tr>
+                                     <tr>
                                         <td>Title:</td>
                                         <td><?php 
                                             echo $row['title'];
                                         ?></td>
-                                    </tr> -->
+                                    </tr> 
 
                                     <tr>
                                         <td>Firstname:</td>

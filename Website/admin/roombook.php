@@ -27,7 +27,6 @@ if(!isset($_SESSION["admin"]))
 					$lname = $row['LName'];
 					$email = $row['Email'];
 					$nat = $row['National'];
-					$country = $row['Country'];
 					$Phone = $row['Phone'];
 					$troom = $row['TRoom'];
 					$nroom = $row['NRoom'];
@@ -38,6 +37,7 @@ if(!isset($_SESSION["admin"]))
 					$cout = $row['cout'];
 					$sta = $row['stat'];
 					$days = $row['nodays'];
+					$date = $row['date'];
 					
 				
 				
@@ -167,6 +167,11 @@ if(!isset($_SESSION["admin"]))
                                             <th>INFORMATION</th>
                                             
                                         </tr>
+										<tr>
+                                            <th>Dated Booked </th>
+                                            <th><?php echo $date;  ?></th>
+                                            
+                                        </tr>
                                         <tr>
                                             <th>Name</th>
                                             <th><?php echo $title.$fname.$lname; ?> </th>
@@ -182,11 +187,7 @@ if(!isset($_SESSION["admin"]))
                                             <th><?php echo $nat; ?></th>
                                             
                                         </tr>
-										<tr>
-                                            <th>Country </th>
-                                            <th><?php echo $country;  ?></th>
-                                            
-                                        </tr>
+										
 										<tr>
                                             <th>Phone No </th>
                                             <th><?php echo $Phone; ?></th>
@@ -246,15 +247,15 @@ if(!isset($_SESSION["admin"]))
                         <div class="panel-footer">
                             <form method="post">
 										<div class="form-group">
-														<label>Select the Conformation</label>
+														<label>Select the Confirmation</label>
 														<select name="conf"class="form-control">
 															<option value selected>	</option>
-															<option value="Conform">Conform</option>
+															<option value="Conform">Approve</option>
 															
 															
 														</select>
 										 </div>
-							<input type="submit" name="co" value="Conform" class="btn btn-success">
+							<input type="submit" name="co" value="Confirm" class="btn btn-success">
 							
 							</form>
                         </div>
