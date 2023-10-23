@@ -58,11 +58,11 @@
                                     <div class="col-md-12">
                                             <div class="row">
                                                 <div class="col-md-8">
-                                                    <h2 style="margin-bottom: 40px;color:white;" >My Bookings</h2>
+                                                    <h2 style="margin-bottom: 40px;color:white;" >Book Now</h2>
                                                 </div>
                                                 <div class="col-md-4">
-                                                    <a href="booking.php">
-                                                        <i class="fa fa-user-circle fa-3x my-4";>MB</i>
+                                                    <a href="reservation.php">
+                                                        <i class="fa fa-user-circle fa-3x my-4";>BN</i>
                                                     </a>
                                                 </div>
                                             </div>

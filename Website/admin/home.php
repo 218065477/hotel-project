@@ -62,7 +62,7 @@ if(!isset($_SESSION["admin"]))
                 <ul class="nav" id="main-menu">
 
                     <li>
-                        <a class="active-menu" href="room.php"><i class="fa fa-dashboard"></i> Status</a>
+                        <a class="active-menu" href="home.php"><i class="fa fa-dashboard"></i> Status</a>
                     </li>
                     <li>
                         <a href="messages.php"><i class="fa fa-desktop"></i> News Letters</a>
@@ -77,7 +77,7 @@ if(!isset($_SESSION["admin"]))
                         <a  href="profit.php"><i class="fa fa-qrcode"></i> Profit</a>
                     </li>
                     <li>
-                        <a href="logout.php"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        <a href="logout.php"><i class="fa fa-sign-out fa-fw"></i>Logout</a>
                     </li>
                    
 
@@ -157,18 +157,14 @@ if(!isset($_SESSION["admin"]))
                                             <th>#</th>
                                             <th>Name</th>
                                             <th>Email</th>
-                                           
+                                            <th>Username</th>
 											<th>Room</th>
 											<th>Bedding</th>
 											<th>Meal</th>
 											<th>Check In</th>
 											<th>Check Out</th>
 											<th>Status</th>
-                                            <th>Dated booked</th>
 											<th>More</th>
-                                            
-                                            
-
 											
                                         </tr>
                                     </thead>
@@ -186,14 +182,13 @@ if(!isset($_SESSION["admin"]))
 												<th>".$trow['id']."</th>
 												<th>".$trow['FName']." ".$trow['LName']."</th>
 												<th>".$trow['Email']."</th>
-												
+												<th>".$trow['username']."</th>
 												<th>".$trow['TRoom']."</th>
 												<th>".$trow['Bed']."</th>
 												<th>".$trow['Meal']."</th>
 												<th>".$trow['cin']."</th>
 												<th>".$trow['cout']."</th>
 												<th>".$trow['stat']."</th>
-                                                <th>".$trow['date']."</th>
 												
 												<th><a href='roombook.php?rid=".$trow['id']." ' class='btn btn-primary'>Action</a></th>
 												</tr>";

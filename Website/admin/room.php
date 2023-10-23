@@ -132,16 +132,16 @@ if(!isset($_SESSION["admin"]))
 										$bed = $_POST['bed'];
 										$place = 'Free';
 										
-										// $check="SELECT * FROM room WHERE type = '$room' AND bedding = '$bed'";
-										// $rs = mysqli_query($con,$check);
-										// $data = mysqli_fetch_array($rs, MYSQLI_NUM);
-										// if($data[0] > 1) {
-										// 	echo "<script type='text/javascript'> alert('Room Already in Exists')</script>";
+										$check="SELECT * FROM room WHERE type = '$room' AND bedding = '$bed'";
+										$rs = mysqli_query($con,$check);
+										$data = mysqli_fetch_array($rs, MYSQLI_NUM);
+										if($data[0] > 1) {
+											echo "<script type='text/javascript'> alert('Room Already in Exists')</script>";
 											
-										// }
+										}
 
-										// else
-										// {
+										else
+										{
 							 
 										
 										$sql ="INSERT INTO `room`( `type`, `bedding`,`place`) VALUES ('$room','$bed','$place')" ;
@@ -153,7 +153,7 @@ if(!isset($_SESSION["admin"]))
 										}
 							 }
 							
-							
+                             }
 							?>
                         </div>
                         

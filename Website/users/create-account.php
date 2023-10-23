@@ -27,7 +27,7 @@ if(isset($_POST["submit"])){
               window.location='create-account.php';</script>";
     }else{
 
-    $pass = password_hash($_POST["pass"], PASSWORD_DEFAULT);
+    //$pass = password_hash($_POST["pass"], PASSWORD_DEFAULT);
     $query = "INSERT INTO tb_data() VALUES('','$title','$name','$surname','$username','$email','$phone','$nation','$pass')";
     //$res = mysqli_query($conn, $query);
 

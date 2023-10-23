@@ -26,15 +26,9 @@
             <a href="#" class="menu__link">Profile</a>
         </li>
         <li class="menu__item">
-            <a href="reservation.php" class="menu__link">Bookings</a>
+            <a href="reservation.php" class="menu__link">Book now</a>
         </li>
-        <li class="menu__item">
-            <a href="#" class="menu__link">Report</a>
-        </li>
-
-        <li class="menu__item">
-            <a href="#" class="menu__link">Report</a>
-        </li>
+        
 
         
         

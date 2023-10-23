@@ -1,7 +1,7 @@
 <?php
 session_start();
 require 'connection.php';
-include('../includes/header.php');
+include ("../includes/header.php");
 
 if(!isset($_SESSION["user"]))
 {
@@ -59,21 +59,20 @@ header("location:user-log.php");
 									// 	echo "<script type='text/javascript'> alert('User Already in Booked')</script>";
 										
 									// }else{
-                                            $new ="Not Confirmed";
-                                            $query = "INSERT INTO roombook(`Title`, `FName`, `LName`, `Email`, `National`, `Phone`,
-                                             `TRoom`, `Bed`, `NRoom`, `Meal`, `cin`, `cout`,`stat`,`nodays`,`date`) VALUES('$title','$name','$surname',
-                                            '$email','$nation','$phone','$_POST[troom]','$_POST[bed]','$_POST[nroom]',
-                                            '$_POST[meal]','$_POST[cin]','$_POST[cout]','$new',datediff('$_POST[cout]','$_POST[cin]'),NOW())";
-
-                                            $res = mysqli_query($conn, $query);
-
-                                        if($res){
-                                           echo "<script>alert('Booking success')</script>";
-                                        }else{
-                                            echo "Error: " . $query . "<br>" . mysqli_error($conn);
+                                            $con=mysqli_connect("localhost","root","","hotel");
+                                            $new ="Not Conform";
+                                            $newUser="INSERT INTO `roombook`(`Title`, `FName`, `LName`, `Email`, `National`, `username`, `Phone`, `TRoom`, `Bed`, `NRoom`, `Meal`, `cin`, `cout`,`stat`,`nodays`) VALUES ('$title','$name','$surname','$email','$nation','$users','$phone','$_POST[troom]','$_POST[bed]','$_POST[nroom]','$_POST[meal]','$_POST[cin]','$_POST[cout]','$new',datediff('$_POST[cout]','$_POST[cin]'))";
+                                            if (mysqli_query($con,$newUser))
+                                            {
+                                                echo "<script type='text/javascript'> alert('Your Booking application has been sent')</script>";
+                                                
+                                            }
+                                            else
+                                            {
+                                                echo "<script type='text/javascript'> alert('Error adding user in database')</script>";
+                                                
+                                            }
                                         }
-
-                                    }
 
 
                                     // End of booking
