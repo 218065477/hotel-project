@@ -35,7 +35,7 @@ if(!isset($_SESSION["admin"]))
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="home.php"><?php echo $_SESSION["user"]; ?> </a>
+                <a class="navbar-brand" href="home.php"><?php echo $_SESSION["admin"]; ?> </a>
             </div>
 
             <ul class="nav navbar-top-links navbar-right">
